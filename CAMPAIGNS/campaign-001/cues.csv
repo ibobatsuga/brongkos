@@ -1,0 +1,9 @@
+start_s,end_s,scene,cue_type,notes
+0,6,HOOK,voice_and_motion,"Kinetic title and simple editorial content props"
+6,14,INPUT,voice_and_motion,"Real dashboard: Ide Prompt/Salin Teks; no fabricated UI"
+14,22,CAROUSEL,voice_and_motion,"Real controls and real result if available"
+22,31,BRAND,voice_and_motion,"Verified template and brand controls"
+31,40,EXPORT,voice_and_motion,"Actual PDF/PNG export UI / recording"
+40,49,SCHEDULE,voice_and_motion,"Actual content calendar / auto-post verification"
+49,56,RECAP,voice_and_motion,"3-step brand graphics"
+56,60,CTA,voice_and_motion,"Original horizontal logo whole on white end card"

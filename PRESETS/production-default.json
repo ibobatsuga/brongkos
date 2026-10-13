@@ -1,0 +1,37 @@
+{
+  "resolution": [
+    1080,
+    1920
+  ],
+  "ratio": "9:16",
+  "fps": 30,
+  "durationSeconds": 60,
+  "totalFrames": 1800,
+  "codec": "libx264",
+  "pixFmt": "yuv420p",
+  "colorSpace": "bt709",
+  "targetBitrate": "12M",
+  "audioCodec": "aac",
+  "audioSampleRate": 48000,
+  "language": "id-ID",
+  "contentModes": [
+    "indonesian_voiceover",
+    "kinetic_typography",
+    "real_UI_demo",
+    "subtitles",
+    "licensed_music",
+    "subtle_sfx"
+  ],
+  "headlinePx": [
+    64,
+    88
+  ],
+  "subtitlePx": [
+    40,
+    48
+  ],
+  "transitionMs": [
+    250,
+    400
+  ]
+}

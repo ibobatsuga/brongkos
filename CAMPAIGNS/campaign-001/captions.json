@@ -1,0 +1,22 @@
+{
+  "language": "id-ID",
+  "timingSource": "provisional-estimate",
+  "timingNote": "No VO recorded yet. Cue times are estimated from character counts inside each scene window. Replace with `campaign_tool.py align` against the real VO transcript, then verify every cue by ear.",
+  "cues": [
+    { "scene": 1, "text": "Ide konten sudah ada," },
+    { "scene": 1, "text": "tetapi memulai carousel masih terasa rumit?" },
+    { "scene": 2, "text": "Di Instadeck, mulai dari topik" },
+    { "scene": 2, "text": "atau teks yang ingin kamu olah." },
+    { "scene": 3, "text": "Tentukan jumlah slide," },
+    { "scene": 3, "text": "lalu susun pesan menjadi carousel yang lebih terarah." },
+    { "scene": 4, "text": "Pilih template dan sesuaikan tampilan" },
+    { "scene": 4, "text": "agar konten mengikuti identitas brand kamu." },
+    { "scene": 5, "text": "Periksa kembali teks dan visualnya." },
+    { "scene": 5, "text": "Siapkan hasil yang sesuai untuk kebutuhan publikasi." },
+    { "scene": 6, "text": "Rapikan rencana tayang lewat kalender" },
+    { "scene": 6, "text": "agar konten berikutnya lebih terorganisir." },
+    { "scene": 7, "text": "Dari bahan awal, ke carousel, hingga rencana tayang." },
+    { "scene": 7, "text": "Jalani alurnya bersama Instadeck." },
+    { "scene": 8, "text": "Lihat cara kerja Instadeck dan mulai dari konten berikutnya." }
+  ]
+}

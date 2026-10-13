@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+  <head><meta charset="UTF-8" /><title>s1-hook · 0–6 s · HOOK</title></head>
+  <body>
+    <template>
+      <style>
+        #root { position: absolute; inset: 0; font-family: "Inter Local", Arial, sans-serif; color: #0f172a; }
+        #s1-wrap { position: absolute; inset: 0; }
+        #s1-title { position: absolute; left: 108px; right: 108px; top: 330px; display: flex; flex-direction: column; gap: 6px; }
+        .s1-line { display: block; font-weight: 700; font-size: 88px; line-height: 1.05; letter-spacing: -0.03em; }
+        #s1-l2 { color: #ff4500; }
+        /* Editorial props: blank carousel cards. Deliberately content-free so
+           nothing reads as product UI or as a real customer post. */
+        #s1-stack { position: absolute; left: 0; right: 0; top: 640px; height: 520px; }
+        .s1-card { position: absolute; top: 40px; left: 390px; width: 300px; height: 375px; border-radius: 24px; background: #ffffff; border: 2px solid #e2e8f0; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); padding: 36px 30px; display: flex; flex-direction: column; gap: 18px; }
+        .s1-bar { display: block; height: 18px; border-radius: 9px; background: #e2e8f0; }
+        .s1-bar.w90 { width: 90%; } .s1-bar.w70 { width: 70%; } .s1-bar.w50 { width: 50%; }
+        .s1-bar.head { height: 30px; background: #cbd5e1; width: 80%; margin-bottom: 10px; }
+        .s1-dot { display: block; width: 56px; height: 8px; border-radius: 4px; background: #ff4500; margin-top: auto; }
+      </style>
+      <div id="root" data-composition-id="s1-hook" data-width="1080" data-height="1920">
+        <div id="s1-wrap">
+          <div id="s1-title">
+            <span id="s1-l1" class="s1-line">Ide ada.</span>
+            <span id="s1-l2" class="s1-line">Mulainya?</span>
+          </div>
+          <div id="s1-stack">
+            <div id="s1-c3" class="s1-card"><span class="s1-bar head"></span><span class="s1-bar w90"></span><span class="s1-bar w70"></span></div>
+            <div id="s1-c2" class="s1-card"><span class="s1-bar head"></span><span class="s1-bar w70"></span><span class="s1-bar w90"></span><span class="s1-bar w50"></span></div>
+            <div id="s1-c1" class="s1-card"><span class="s1-bar head"></span><span class="s1-bar w90"></span><span class="s1-bar w50"></span><span class="s1-dot"></span></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Scene-local seconds. Hook lands inside the first 2 s (CLAUDE.md).
+        const tl = gsap.timeline({ paused: true });
+        const ease = "power3.out";
+        tl.fromTo("#s1-l1", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease }, 0.1);
+        tl.fromTo("#s1-l2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease }, 0.9);
+        // ~2 s: blank cards deal in (the "ide" waiting to become a carousel).
+        tl.fromTo("#s1-c3", { opacity: 0, y: 60, rotation: 0 }, { opacity: 1, y: 0, rotation: -8, x: -150, duration: 0.4, ease }, 1.8);
+        tl.fromTo("#s1-c2", { opacity: 0, y: 60, rotation: 0 }, { opacity: 1, y: 0, rotation: 7, x: 150, duration: 0.4, ease }, 2.0);
+        tl.fromTo("#s1-c1", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease }, 2.2);
+        // ~4 s: the cards hesitate (scattered = "masih terasa rumit").
+        tl.to("#s1-c3", { x: -190, y: 30, rotation: -14, duration: 0.4, ease: "power2.inOut" }, 3.9);
+        tl.to("#s1-c2", { x: 190, y: 20, rotation: 12, duration: 0.4, ease: "power2.inOut" }, 3.9);
+        tl.to("#s1-c1", { y: -20, rotation: 3, duration: 0.4, ease: "power2.inOut" }, 3.9);
+        // Exit: fade whole scene before the cut at 6.0 s.
+        tl.fromTo("#s1-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power1.in" }, 5.6);
+        window.__timelines["s1-hook"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "brand": "Instadeck",
+  "interfaceName": "InstaDeck PRO",
+  "taglineProposal": "Dari ide ke carousel.",
+  "primaryColor": {
+    "hex": "#FF4500",
+    "status": "verified SVG"
+  },
+  "white": {
+    "hex": "#FFFFFF",
+    "status": "verified SVG"
+  },
+  "uiCoral": {
+    "hex": "#FF4224",
+    "status": "observed screenshot"
+  },
+  "navy": {
+    "hex": "#0F172A",
+    "status": "observed screenshot"
+  },
+  "background": {
+    "hex": "#F8FAFC",
+    "status": "observed screenshot"
+  },
+  "border": {
+    "hex": "#E2E8F0",
+    "status": "observed screenshot"
+  },
+  "proposedSupporting": {
+    "slate": "#475569",
+    "success": "#047857",
+    "purple": "#6366F1"
+  },
+  "font": {
+    "family": "Inter",
+    "status": "proposed; official font unverified",
+    "fallback": "Arial, sans-serif"
+  },
+  "tone": "praktis, kreatif, jelas, mendukung",
+  "nameRule": "Do not redraw original logo or add PRO to wordmark",
+  "logoAssets": "BRAND/logo/* are extracted raster illustrations from supplied PDF, NOT original vector masters",
+  "sources": [
+    "BRAND/references/Instadeck_Brand_Kit.pdf pp.3-6,11-13"
+  ]
+}

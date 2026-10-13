@@ -1,0 +1,9 @@
+node_modules/
+# HyperFrames scratch: check reports, snapshots, render segments
+.hyperframes/
+renders/.hf-segments/
+# Full-size renders stay local; commit only small review previews
+RENDERS/final/*.mp4
+RENDERS/previews/*-draft.mp4
+# Word-level transcripts are regenerated from the VO
+CAMPAIGNS/*/transcript.json

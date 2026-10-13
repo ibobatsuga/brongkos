@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+  <head><meta charset="UTF-8" /><title>s8-cta · 56–60 s · CTA</title></head>
+  <body>
+    <template>
+      <style>
+        #root { position: absolute; inset: 0; font-family: "Inter Local", Arial, sans-serif; color: #0f172a; }
+        /* White end card (brand kit p.12: horizontal logo on a white field). */
+        #s8-card { position: absolute; inset: 0; background: #ffffff; }
+        #s8-logo { position: absolute; left: 180px; top: 700px; display: block; width: 720px; height: auto; }
+        #s8-cta-row { position: absolute; left: 108px; right: 108px; top: 940px; display: flex; justify-content: center; }
+        /* Navy on coral ≈ 5.15:1 (brand kit p.4); white on coral is large-text only. */
+        #s8-pill { display: block; padding: 26px 56px; border-radius: 999px; background: #ff4224; color: #0f172a; font-weight: 700; font-size: 48px; letter-spacing: -0.01em; }
+        /* No URL on the end card: ctaUrl is not yet tested (brief.json, brand kit p.12). */
+      </style>
+      <div id="root" data-composition-id="s8-cta" data-width="1080" data-height="1920">
+        <div id="s8-card">
+          <!-- RASTER PREVIEW from brand kit. Swap for the official SVG master before final export. -->
+          <img id="s8-logo" src="../assets/brand/instadeck-horizontal-extracted-from-brandkit.png" alt="Instadeck" />
+          <div id="s8-cta-row"><span id="s8-pill">Lihat cara kerjanya</span></div>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        const ease = "power3.out";
+        tl.fromTo("#s8-card", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, 0);
+        // Whole logo: fade + translate only. No rotation, scale-pop, glow or per-shape animation.
+        // Starts once the card is fully white so the raster preview's white box never shows.
+        tl.fromTo("#s8-logo", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease }, 0.3);
+        tl.fromTo("#s8-pill", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease }, 0.8);
+        // Holds to the last frame (59.967 s); no exit.
+        window.__timelines["s8-cta"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

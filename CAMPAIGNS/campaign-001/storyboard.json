@@ -1,0 +1,114 @@
+[
+  {
+    "scene": 1,
+    "startSec": 0,
+    "endSec": 6,
+    "frames": [
+      0,
+      180
+    ],
+    "slug": "HOOK",
+    "text": "Ide ada. Mulainya?",
+    "voiceover": "Ide konten sudah ada, tetapi memulai carousel masih terasa rumit?",
+    "visual": "Kinetic title and simple editorial content props",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  },
+  {
+    "scene": 2,
+    "startSec": 6,
+    "endSec": 14,
+    "frames": [
+      180,
+      420
+    ],
+    "slug": "INPUT",
+    "text": "Mulai dari bahan kamu",
+    "voiceover": "Di Instadeck, mulai dari topik atau teks yang ingin kamu olah.",
+    "visual": "Real dashboard: Ide Prompt/Salin Teks; no fabricated UI",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  },
+  {
+    "scene": 3,
+    "startSec": 14,
+    "endSec": 22,
+    "frames": [
+      420,
+      660
+    ],
+    "slug": "CAROUSEL",
+    "text": "Susun jadi carousel",
+    "voiceover": "Tentukan jumlah slide, lalu susun pesan menjadi carousel yang lebih terarah.",
+    "visual": "Real controls and real result if available",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  },
+  {
+    "scene": 4,
+    "startSec": 22,
+    "endSec": 31,
+    "frames": [
+      660,
+      930
+    ],
+    "slug": "BRAND",
+    "text": "Tampilan sesuai brand",
+    "voiceover": "Pilih template dan sesuaikan tampilan agar konten mengikuti identitas brand kamu.",
+    "visual": "Verified template and brand controls",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  },
+  {
+    "scene": 5,
+    "startSec": 31,
+    "endSec": 40,
+    "frames": [
+      930,
+      1200
+    ],
+    "slug": "EXPORT",
+    "text": "Periksa lalu ekspor",
+    "voiceover": "Periksa kembali teks dan visualnya. Siapkan hasil yang sesuai untuk kebutuhan publikasi.",
+    "visual": "Actual PDF/PNG export UI / recording",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  },
+  {
+    "scene": 6,
+    "startSec": 40,
+    "endSec": 49,
+    "frames": [
+      1200,
+      1470
+    ],
+    "slug": "SCHEDULE",
+    "text": "Rencanakan jadwal tayang",
+    "voiceover": "Rapikan rencana tayang lewat kalender agar konten berikutnya lebih terorganisir.",
+    "visual": "Actual content calendar / auto-post verification",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  },
+  {
+    "scene": 7,
+    "startSec": 49,
+    "endSec": 56,
+    "frames": [
+      1470,
+      1680
+    ],
+    "slug": "RECAP",
+    "text": "Ide → Carousel → Jadwal",
+    "voiceover": "Dari bahan awal, ke carousel, hingga rencana tayang. Jalani alurnya bersama Instadeck.",
+    "visual": "3-step brand graphics",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  },
+  {
+    "scene": 8,
+    "startSec": 56,
+    "endSec": 60,
+    "frames": [
+      1680,
+      1800
+    ],
+    "slug": "CTA",
+    "text": "Lihat cara kerjanya",
+    "voiceover": "Lihat cara kerja Instadeck dan mulai dari konten berikutnya.",
+    "visual": "Original horizontal logo whole on white end card",
+    "status": "proposed from Brand Kit p.12; verify footage and align speech"
+  }
+]

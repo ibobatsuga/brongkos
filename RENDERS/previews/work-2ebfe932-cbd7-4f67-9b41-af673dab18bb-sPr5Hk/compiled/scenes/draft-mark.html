@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+  <head><meta charset="UTF-8" /><title>draft-mark · 0–60 s · review watermark</title></head>
+  <body>
+    <template>
+      <style>
+        #root { position: absolute; inset: 0; font-family: "Inter Local", Arial, sans-serif; pointer-events: none; }
+        #dm-band { position: absolute; left: 108px; right: 108px; top: 120px; padding: 14px 24px; border-radius: 16px; background: rgba(15, 23, 42, 0.82); color: #ffffff; text-align: center; }
+        #dm-title { display: block; font-size: 26px; font-weight: 700; letter-spacing: 0.12em; }
+        #dm-note { display: block; margin-top: 6px; font-size: 20px; font-weight: 400; color: #e2e8f0; }
+      </style>
+      <div id="root" data-composition-id="draft-mark" data-width="1080" data-height="1920">
+        <div id="dm-band">
+          <span id="dm-title">DRAF PRATINJAU · BUKAN IKLAN FINAL</span>
+          <span id="dm-note">Tanpa VO/musik · UI = placeholder · logo = preview raster · caption waktu sementara</span>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        window.__timelines["draft-mark"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

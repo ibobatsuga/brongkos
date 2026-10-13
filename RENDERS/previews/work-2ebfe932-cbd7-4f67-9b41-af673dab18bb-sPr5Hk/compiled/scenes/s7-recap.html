@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+  <head><meta charset="UTF-8" /><title>s7-recap · 49–56 s · RECAP</title></head>
+  <body>
+    <template>
+      <style>
+        #root { position: absolute; inset: 0; font-family: "Inter Local", Arial, sans-serif; color: #0f172a; }
+        #s7-wrap { position: absolute; inset: 0; }
+        /* Whole logo on a clean white panel (brand kit p.3); fade/translate only. */
+        #s7-logo-panel { position: absolute; left: 240px; top: 300px; width: 600px; height: 180px; border-radius: 24px; background: #ffffff; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; }
+        #s7-logo { display: block; width: 480px; height: auto; }
+        #s7-steps { position: absolute; left: 108px; right: 108px; top: 540px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+        .s7-step { display: flex; align-items: center; gap: 32px; width: 864px; height: 140px; padding: 0 40px; border-radius: 24px; background: #ffffff; border: 2px solid #e2e8f0; box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06); }
+        .s7-num { display: flex; align-items: center; justify-content: center; flex: 0 0 76px; width: 76px; height: 76px; border-radius: 38px; background: #ff4500; color: #0f172a; font-weight: 700; font-size: 40px; }
+        .s7-label { font-weight: 700; font-size: 72px; letter-spacing: -0.03em; line-height: 1; }
+        .s7-arrow { display: block; width: 44px; height: 44px; }
+      </style>
+      <div id="root" data-composition-id="s7-recap" data-width="1080" data-height="1920">
+        <div id="s7-wrap">
+          <div id="s7-logo-panel">
+            <!-- RASTER PREVIEW from brand kit. Swap for the official SVG master before final export. -->
+            <img id="s7-logo" src="../assets/brand/instadeck-horizontal-extracted-from-brandkit.png" alt="Instadeck" />
+          </div>
+          <!-- On-screen text: "Ide → Carousel → Jadwal" (arrows drawn as SVG; Inter latin subset has no U+2192). -->
+          <div id="s7-steps">
+            <div id="s7-a" class="s7-step"><span class="s7-num">1</span><span class="s7-label">Ide</span></div>
+            <svg id="s7-ar1" class="s7-arrow" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 6 V34 M10 24 L22 36 L34 24" fill="none" stroke="#ff4500" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            <div id="s7-b" class="s7-step"><span class="s7-num">2</span><span class="s7-label">Carousel</span></div>
+            <svg id="s7-ar2" class="s7-arrow" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 6 V34 M10 24 L22 36 L34 24" fill="none" stroke="#ff4500" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            <div id="s7-c" class="s7-step"><span class="s7-num">3</span><span class="s7-label">Jadwal</span></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        const ease = "power3.out";
+        tl.fromTo("#s7-a", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease }, 0.2);
+        tl.fromTo("#s7-ar1", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3, ease }, 1.4);
+        tl.fromTo("#s7-b", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease }, 1.6);
+        tl.fromTo("#s7-ar2", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3, ease }, 2.9);
+        tl.fromTo("#s7-c", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease }, 3.1);
+        // "...bersama Instadeck": whole logo panel fades and rises as one unit.
+        tl.fromTo("#s7-logo-panel", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease }, 4.4);
+        tl.fromTo("#s7-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power1.in" }, 6.6);
+        window.__timelines["s7-recap"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

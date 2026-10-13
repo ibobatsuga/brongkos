@@ -1,0 +1,23 @@
+{
+  "id": "campaign-001",
+  "name": "Dari Ide ke Carousel",
+  "audience": "Admin media sosial, UMKM, kreator, homeless media Indonesia",
+  "objective": "Product education / website visit",
+  "platform": "Meta vertical placements",
+  "duration": 60,
+  "format": "9:16",
+  "language": "id-ID",
+  "voice": "hybrid VO + kinetic",
+  "cta": "Lihat cara kerjanya",
+  "ctaUrl": "https://pro.instadeck.id/",
+  "ctaUrlStatus": "requested earlier; test destination before publication",
+  "claimsRequireReview": true,
+  "assetsRequired": [
+    "original logo vector",
+    "recordings/screenshots of verified product UI",
+    "licensed voiceover",
+    "licensed music/SFX"
+  ],
+  "productionStatus": "PREPARED FOR RENDERING: HyperFrames composition built and checked; watermarked draft only. Final blocked on assets/approvals listed in PREFLIGHT.md",
+  "addressRegister": "kamu"
+}

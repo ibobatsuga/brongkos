@@ -1,0 +1,27 @@
+{
+  "status": "user-confirmed: package prices, trial, auto-post functionality directly verified",
+  "userConfirmedOn": "2026-10-13",
+  "pricingSnapshotForReference": {
+    "Basic": 49000,
+    "Creator": 149000,
+    "Agency": 399000,
+    "Enterprise": 1149000
+  },
+  "pricingSnapshotStatus": "Seen in brand kit Sept/Oct 2026; reconfirm currently active package, features and terms before specific ad copy",
+  "trial": {
+    "available": true,
+    "durationDays": null,
+    "note": "User has confirmed existence, but did not explicitly state duration in this turn. Do not assume 7 days."
+  },
+  "autoPost": {
+    "available": true,
+    "supportedPlatforms": [],
+    "note": "Functionality confirmed by user; only mention platforms after documented verification."
+  },
+  "promotionCopyApproval": {
+    "pricesAndPlans": false,
+    "trialDuration": false,
+    "supportedPlatforms": false
+  },
+  "approvedNonNumericCTA": "Lihat cara kerjanya"
+}

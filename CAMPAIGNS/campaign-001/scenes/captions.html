@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head><meta charset="UTF-8" /><title>captions · 0–60 s · burned-in subtitles</title></head>
+  <body>
+    <template>
+      <style>
+        #root { position: absolute; inset: 0; font-family: "Inter Local", Arial, sans-serif; pointer-events: none; }
+        /* Bottom edge at y=1236: above Meta Reels' bottom ~35% overlay zone (y>=1248)
+           and inside title-safe x 108..972. Grows upward for a 2-line cue. */
+        .cap { position: absolute; left: 108px; right: 108px; bottom: 684px; display: flex; justify-content: center; }
+        .cap-box { display: block; max-width: 864px; padding: 12px 26px; border-radius: 18px; background: #ffffff; border: 2px solid #e2e8f0; color: #0f172a; font-size: 44px; font-weight: 600; line-height: 1.25; text-align: center; }
+      </style>
+      <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+        <!-- BEGIN GENERATED CUES (python3 scripts/campaign_tool.py build; do not hand-edit) -->
+        <div id="cap-01" class="cap" data-in="0.267" data-out="1.967"><span class="cap-box">Ide konten sudah ada,</span></div>
+        <div id="cap-02" class="cap" data-in="2.067" data-out="5.567"><span class="cap-box">tetapi memulai carousel masih terasa rumit?</span></div>
+        <div id="cap-03" class="cap" data-in="6.267" data-out="9.800"><span class="cap-box">Di Instadeck, mulai dari topik</span></div>
+        <div id="cap-04" class="cap" data-in="9.900" data-out="13.533"><span class="cap-box">atau teks yang ingin kamu olah.</span></div>
+        <div id="cap-05" class="cap" data-in="14.267" data-out="16.367"><span class="cap-box">Tentukan jumlah slide,</span></div>
+        <div id="cap-06" class="cap" data-in="16.467" data-out="21.533"><span class="cap-box">lalu susun pesan menjadi carousel yang lebih terarah.</span></div>
+        <div id="cap-07" class="cap" data-in="22.267" data-out="26.033"><span class="cap-box">Pilih template dan sesuaikan tampilan</span></div>
+        <div id="cap-08" class="cap" data-in="26.133" data-out="30.567"><span class="cap-box">agar konten mengikuti identitas brand kamu.</span></div>
+        <div id="cap-09" class="cap" data-in="31.267" data-out="34.533"><span class="cap-box">Periksa kembali teks dan visualnya.</span></div>
+        <div id="cap-10" class="cap" data-in="34.633" data-out="39.533"><span class="cap-box">Siapkan hasil yang sesuai untuk kebutuhan publikasi.</span></div>
+        <div id="cap-11" class="cap" data-in="40.267" data-out="44.100"><span class="cap-box">Rapikan rencana tayang lewat kalender</span></div>
+        <div id="cap-12" class="cap" data-in="44.200" data-out="48.533"><span class="cap-box">agar konten berikutnya lebih terorganisir.</span></div>
+        <div id="cap-13" class="cap" data-in="49.267" data-out="53.033"><span class="cap-box">Dari bahan awal, ke carousel, hingga rencana tayang.</span></div>
+        <div id="cap-14" class="cap" data-in="53.133" data-out="55.533"><span class="cap-box">Jalani alurnya bersama Instadeck.</span></div>
+        <div id="cap-15" class="cap" data-in="56.267" data-out="59.900"><span class="cap-box">Lihat cara kerja Instadeck dan mulai dari konten berikutnya.</span></div>
+        <!-- END GENERATED CUES -->
+      </div>
+      <script>
+        // Hard on/off per cue, driven by each cue's data-in/data-out (seconds).
+        const tl = gsap.timeline({ paused: true });
+        document.querySelectorAll('[data-composition-id="captions"] .cap').forEach((el) => {
+          tl.set(el, { opacity: 0 }, 0);
+          tl.set(el, { opacity: 1 }, parseFloat(el.dataset.in));
+          tl.set(el, { opacity: 0 }, parseFloat(el.dataset.out));
+        });
+        window.__timelines["captions"] = tl;
+      </script>
+    </template>
+  </body>
+</html>
