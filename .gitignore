@@ -7,3 +7,6 @@ RENDERS/final/*.mp4
 RENDERS/previews/*-draft.mp4
 # Word-level transcripts are regenerated from the VO
 CAMPAIGNS/*/transcript.json
+# In-progress render work dirs
+RENDERS/**/work-*/
+RENDERS/**/.*hf-transaction*/

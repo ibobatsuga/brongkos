@@ -67,4 +67,4 @@ python3 scripts/qa_video.py RENDERS/final/instadeck-c001-dari-ide-ke-carousel-60
 python3 scripts/placement_preview.py RENDERS/final/instadeck-c001-dari-ide-ke-carousel-60s-1080x1920.mp4
 ```
 
-Check the final with ffprobe for Rec.709 tags: the draft encode was untagged (see `RENDERS/previews/campaign-001-draft.QC.md`).
+The draft encode came out tagged BT.709 with a 0.54 Mbps draft bitrate. Re-check both on the final, since the target is 10–16 Mbps (see `RENDERS/previews/campaign-001-draft.QC.md`).
