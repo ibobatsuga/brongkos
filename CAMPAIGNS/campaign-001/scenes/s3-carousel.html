@@ -9,14 +9,21 @@
         #s3-title { position: absolute; left: 108px; right: 108px; top: 300px; height: 270px; display: flex; flex-wrap: wrap; align-content: flex-end; column-gap: 22px; }
         .s3-w { display: inline-block; font-weight: 700; font-size: 84px; line-height: 1.08; letter-spacing: -0.03em; }
         .s3-acc { color: #ff4500; }
-        /* UI footage slot. Real product footage goes here (see SWAP below);
-           until then it is an explicitly labelled placeholder, never a redraw. */
-        #s3-slot { position: absolute; left: 108px; top: 600px; width: 864px; height: 486px; }
-        #s3-frame { position: absolute; inset: 0; border-radius: 24px; overflow: hidden; background: #ffffff; border: 2px solid #e2e8f0; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.10); }
-        #s3-ph { position: absolute; inset: 18px; border-radius: 14px; border: 3px dashed #94a3b8; background: repeating-linear-gradient(135deg, #f8fafc 0 22px, #f1f5f9 22px 44px); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 18px; padding: 40px 56px; text-align: center; }
-        .s3-tag { font-size: 24px; font-weight: 700; letter-spacing: 0.14em; color: #0f172a; }
-        .s3-desc { font-size: 30px; font-weight: 600; line-height: 1.3; color: #0f172a; max-width: 680px; }
-        .s3-file { font-size: 22px; font-weight: 400; color: #475569; }
+        /* UI stage: real product screenshots, cropped and zoomed only (scripts/make_ui_crops.sh). */
+        #s3-stage { position: absolute; left: 108px; top: 600px; width: 864px; height: 486px; }
+        .s3-card { position: absolute; left: 0; width: 864px; padding: 14px; border-radius: 24px; background: #ffffff; border: 2px solid #e2e8f0; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.10); }
+        .s3-view { position: relative; width: 836px; overflow: hidden; border-radius: 12px; }
+        .s3-img { display: block; }
+        .s3-tag { position: absolute; padding: 8px 16px; border-radius: 999px; background: #0f172a; color: #ffffff; font-size: 22px; font-weight: 600; }
+        #s3-pager-card { left: 232px; width: 400px; top: 0; }
+        #s3-pager-card .s3-view { width: 372px; }
+        #s3-pager { width: 372px; height: 82px; }
+        .s3-phone { position: absolute; top: 124px; width: 266px; padding: 8px; }
+        .s3-phone .s3-view { width: 250px; }
+        .s3-phone img { width: 250px; height: 332px; }
+        #s3-p1 { left: 30px; } #s3-p2 { left: 299px; } #s3-p3 { left: 568px; }
+        #s3-p2 { z-index: 2; }
+        #s3-tag { right: 0; top: 66px; }
       </style>
       <div id="root" data-composition-id="s3-carousel" data-width="1080" data-height="1920">
         <div id="s3-wrap">
@@ -25,20 +32,18 @@
             <span class="s3-w">jadi</span>
             <span class="s3-w s3-acc">carousel</span>
           </div>
-          <div id="s3-slot">
-            <div id="s3-frame">
-              <!--
-                SWAP: when verified footage exists, replace #s3-ph with
-                  <video id="s3-ui" src="../assets/ui/s3-carousel.mp4" muted playsinline data-start="0"
-                         style="width:100%;height:100%;object-fit:cover"></video>
-                and retarget the punch-in tween to the region actually being demoed.
-              -->
-              <div id="s3-ph">
-                <span class="s3-tag">SLOT REKAMAN UI ASLI</span>
-                <span class="s3-desc">Pilihan jumlah slide dan hasil carousel yang benar-benar dibuat</span>
-                <span class="s3-file">Placeholder pratinjau, bukan tampilan produk · assets/ui/s3-carousel.mp4</span>
-              </div>
-            </div>
+          <!--
+            UI: real Instadeck PRO screenshots from the app repo's tutorial images
+            (low-res, may predate production). SWAP for a verified screen recording:
+              <video id="s3-ui" src="../assets/ui/s3-carousel.mp4" muted playsinline data-start="0"
+                     style="width:100%;height:100%;object-fit:cover"></video>
+          -->
+          <div id="s3-stage">
+            <div id="s3-pager-card" class="s3-card"><div class="s3-view"><img id="s3-pager" class="s3-img" src="../assets/ui/s3-pager.png" alt="Navigasi 5 slide" /></div></div>
+            <div id="s3-p1" class="s3-card s3-phone"><div class="s3-view"><img class="s3-img" src="../assets/ui/s3-slide1.png" alt="Contoh slide cover" /></div></div>
+            <div id="s3-p3" class="s3-card s3-phone"><div class="s3-view"><img class="s3-img" src="../assets/ui/s3-slide5.png" alt="Contoh slide penutup" /></div></div>
+            <div id="s3-p2" class="s3-card s3-phone"><div class="s3-view"><img class="s3-img" src="../assets/ui/s3-slide2.png" alt="Contoh slide isi" /></div></div>
+            <span id="s3-tag" class="s3-tag">Contoh konten</span>
           </div>
         </div>
       </div>
@@ -46,9 +51,15 @@
         const tl = gsap.timeline({ paused: true });
         const ease = "power3.out";
         tl.fromTo(".s3-w", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.3, ease, stagger: 0.09 }, 0.1);
-        tl.fromTo("#s3-slot", { opacity: 0, y: 48, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease }, 0.35);
-        // Mid-scene beat: gentle punch-in on the demo area (planned camera move).
-        tl.fromTo("#s3-frame", { scale: 1 }, { scale: 1.05, duration: 1.2, ease: "power2.inOut" }, 3.60);
+        tl.fromTo("#s3-pager-card", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease }, 0.35);
+        tl.fromTo("#s3-p1", { opacity: 0, y: 70, rotation: 0 }, { opacity: 1, y: 0, rotation: -4, duration: 0.4, ease }, 1.1);
+        tl.fromTo("#s3-p2", { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.4, ease }, 1.35);
+        tl.fromTo("#s3-p3", { opacity: 0, y: 70, rotation: 0 }, { opacity: 1, y: 0, rotation: 4, duration: 0.4, ease }, 1.6);
+        tl.fromTo("#s3-tag", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 2.0);
+        // Read the structure left to right: cover → isi → penutup.
+        tl.to("#s3-p1", { y: -18, duration: 0.35, ease: "power2.out" }, 3.2).to("#s3-p1", { y: 0, duration: 0.35, ease: "power2.inOut" }, 4.0);
+        tl.to("#s3-p2", { y: -18, duration: 0.35, ease: "power2.out" }, 4.2).to("#s3-p2", { y: 0, duration: 0.35, ease: "power2.inOut" }, 5.0);
+        tl.to("#s3-p3", { y: -18, duration: 0.35, ease: "power2.out" }, 5.2).to("#s3-p3", { y: 0, duration: 0.35, ease: "power2.inOut" }, 6.0);
         tl.fromTo("#s3-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power1.in" }, 7.60);
         window.__timelines["s3-carousel"] = tl;
       </script>

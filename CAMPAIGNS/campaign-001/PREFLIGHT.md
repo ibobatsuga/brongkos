@@ -26,7 +26,7 @@ Copy status: all lines are still "proposed from Brand Kit p.12" in `storyboard.j
 ## Blockers for the final render
 
 1. **Official logo master**: SVG/PDF of the horizontal logo. The scenes use `assets/brand/instadeck-horizontal-extracted-from-brandkit.png`, a raster preview.
-2. **UI recordings** (one per scene, real product, private data masked). Put them in `assets/ui/` with these names:
+2. **UI recordings** (one per scene, real product, private data masked). *Interim:* scenes 2–6 now use crops of the app repo's own tutorial screenshots (`scripts/make_ui_crops.sh`). They are real UI but low-res and dated ≤ 2026-09-21, so verify them against the live product or replace them. Put them in `assets/ui/` with these names:
    - `s2-input.mp4` (8 s + 1 s handles): choosing Link Web, Salin Teks or Ide Prompt and entering material
    - `s3-carousel.mp4` (8 s): slide-count choice → the real generated carousel
    - `s4-brand.mp4` (9 s): template selection and active brand settings

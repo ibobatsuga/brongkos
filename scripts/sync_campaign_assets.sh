@@ -19,6 +19,12 @@ else
   echo "logo: RASTER PREVIEW extracted from brand kit (not a vector master)"
 fi
 
+# Real UI crops (scripts/make_ui_crops.sh). Real screen recordings dropped into
+# assets/ui/ by hand are left untouched.
+if ls "$ROOT"/ASSETS/screenshots/scoopcraft-tutorial/crops/*.png >/dev/null 2>&1; then
+  cp "$ROOT"/ASSETS/screenshots/scoopcraft-tutorial/crops/*.png "$DEST/ui/"
+fi
+
 cp "$ROOT"/ASSETS/fonts/inter/*.woff2 "$ROOT/ASSETS/fonts/inter/OFL.txt" "$DEST/fonts/"
 
 GSAP="$ROOT/node_modules/gsap/dist/gsap.min.js"

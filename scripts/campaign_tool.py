@@ -239,6 +239,9 @@ def verify(camp, final):
     ph = sorted(n for n, t in scenes.items() if re.search(r'id="[a-z0-9]+-ph"', t))
     if ph:
         r.warn(f"UI footage placeholders still in {ph}")
+    shots = sorted(n for n, t in scenes.items() if re.search(r'src="\.\./assets/ui/[^"]+\.png"', t))
+    if shots:
+        r.warn(f"UI is still app-repo tutorial screenshots (low-res, not verified against live) in {shots}")
     index = (camp / "index.html").read_text()
     if not re.search(r"<audio\b", re.sub(r"<!--.*?-->", "", index, flags=re.S)):
         r.warn("no <audio> in index.html: VO, licensed music and SFX not placed")
