@@ -7,17 +7,19 @@ Status on 2026-10-13: **composition ready for rendering; final assets missing.**
 | Scene | Copy (VO / on-screen) | Status | Basis and condition |
 | --- | --- | --- | --- |
 | 1 HOOK | "Ide konten sudah ada, tetapi memulai carousel masih terasa rumit?" / "Ide ada. Mulainya?" | Approved (no product claim) | Brand kit p.12 copy. Props are blank cards with no UI and no fake posts. |
-| 2 INPUT | "…mulai dari topik atau teks yang ingin kamu olah." | Conditional | Link Web / Salin Teks / Ide Prompt were *observed* in screenshot S5. Ship only over a real recording of a working input. |
-| 3 CAROUSEL | "Tentukan jumlah slide, lalu susun pesan…" | Conditional | Slide-count control observed in S5. Needs a real recording of generation and its actual result. |
-| 4 BRAND | "Pilih template dan sesuaikan tampilan…" | Conditional | Template choice observed in S3/S5. The Brand Kit feature is plan- or add-on-dependent, so record it on the plan being advertised. Do not show a template count. |
-| 5 EXPORT | "Periksa kembali… Siapkan hasil…" | Conditional | PDF/PNG export observed in S5. Needs a real export recording. The VO makes no format promise. |
-| 6 SCHEDULE | "Rapikan rencana tayang lewat kalender…" | Conditional | Calendar observed in S3. Auto-post is user-confirmed, but **no platform is approved**, so the VO and screen copy mention only the calendar. Mask platform names in the recording, or get `supportedPlatforms` approved first. |
+| 2 INPUT | "…mulai dari topik atau teks yang ingin kamu olah." | Conditional | Link Web / Salin Teks / Ide Prompt were *observed* in screenshot S5 and exist in code (`multi-input-form.tsx`). Ship only over a real recording of a working input. |
+| 3 CAROUSEL | "Tentukan jumlah slide, lalu susun pesan…" | Conditional | Slide-count control observed in S5 and in code (`slide-selector.tsx`). Needs a real recording of generation and its actual result. |
+| 4 BRAND | "Pilih template dan sesuaikan tampilan…" | Conditional | Template choice observed in S3/S5. In code, Brand Kit is allowed only for Creator and above (`api/brand/route.ts:54`), so record on a Creator+ account and never imply it is in Basic. Do not show a template count. |
+| 5 EXPORT | "Periksa kembali… Siapkan hasil…" | Conditional | PDF/PNG/ZIP export observed in S5 and in code (no plan gate on the routes). Needs a real export recording. The VO makes no format promise. |
+| 6 SCHEDULE | "Rapikan rencana tayang lewat kalender…" | Conditional | Calendar observed in S3. Auto-post is user-confirmed, but **no platform is approved**, so the VO and screen copy mention only the calendar. Mask platform names in the recording, or get `supportedPlatforms` approved first. In code, the publisher's **simulator returns a fake "success"** for accounts without a real token, and Pinterest/Telegram are simulator-only, so a recorded success screen is not proof. |
 | 7 RECAP | "Ide → Carousel → Jadwal" | Approved | Summary of scenes 2–6. Inherits their conditions. |
 | 8 CTA | "Lihat cara kerjanya" | Approved | `BRAND/commercial.json` → `approvedNonNumericCTA`. |
 | — | Prices, plans, trial length, platforms, stats, testimonials | **Excluded** | `promotionCopyApproval` is all `false`. `campaign_tool.py verify` fails the build if any of these appear. |
 | — | URL `https://pro.instadeck.id/` | Excluded from video | `brief.json`: test the destination before publication. Use it as the Meta link only. |
 
 Address register: **kamu** throughout (casual social ad). The tool rejects any `Anda`.
+
+Code evidence for these rows (fork `ibobatsuga/scoopcraft` @ `ed3b49b`, 2026-09-21): `CODE_EVIDENCE.md`. Code shows a feature exists, not that it is live on the advertised plan.
 
 Copy status: all lines are still "proposed from Brand Kit p.12" in `storyboard.json`. **Owner sign-off is required before the final render.**
 
