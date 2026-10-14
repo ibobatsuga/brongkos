@@ -1,0 +1,32 @@
+feature,area,priority,original,clone,notes
+Cover dengan identitas brand dan tagline,hero,must,yes,yes,hero kinetic POP LAB + logo IG
+Teks nama brand berulang di dalam lingkaran,hero,should,yes,partial,jadi cincin elips dari logo + teks gema di section kontak
+Teks vertikal raksasa,hero,should,yes,partial,diganti pita teks miring berjalan
+Tentang kami,intro,must,yes,yes,
+Latar belakang,intro,should,yes,yes,digabung ke metode Dengar/Coba/Ulangi
+Ringkasan kelas DJ,intro,must,yes,yes,
+Daftar lini usaha,lini,must,yes,yes,5 kartu spesimen
+Halaman layanan dengan poin a-e,layanan,must,yes,partial,digabung ke kartu lini; detail per layanan belum ada data
+Foto dalam bentuk blob,visual,should,yes,yes,2 foto dari Instagram PopLab
+Halaman pembatas bab,visual,could,yes,yes,pita teks berjalan
+Fasilitas studio,studio,must,yes,no,menunggu daftar fasilitas resmi
+Daftar hardware DJ,studio,must,yes,no,menunggu inventaris resmi
+Daftar software DJ,studio,should,yes,no,menunggu data
+Sound system dan lighting,studio,should,yes,no,menunggu data
+Kurikulum per program,kelas,must,yes,partial,draf modul; perlu konfirmasi
+Meta kelas (pertemuan / hari / jam),kelas,must,yes,partial,placeholder isi
+Harga kelas,kelas,should,yes,partial,placeholder isi
+Tabel rental alat,rental,must,yes,partial,"daftar draf, harga placeholder"
+Syarat rental,rental,must,yes,partial,3 dari 4 placeholder
+Tim dan instruktur,tim,should,yes,partial,diganti arsip event + lineup; instruktur belum ada data
+Kontak sosmed telepon email,kontak,must,yes,partial,Instagram ada; WA dan email placeholder
+Alamat studio,kontak,must,yes,skip,user minta alamat tidak ditampilkan
+Lini multimedia dan teknologi,lini,could,yes,skip,bukan bisnis PopLab
+Event dan konsultan,lini,could,yes,skip,bukan bisnis PopLab
+Video mapping,layanan,could,yes,skip,bukan bisnis PopLab
+Creative market,layanan,could,yes,skip,bukan bisnis PopLab
+Live streaming,layanan,could,yes,skip,bukan bisnis PopLab
+In-house music ambience,layanan,could,yes,skip,bukan bisnis PopLab
+Perakit paket rental ke WhatsApp,rental,should,no,yes,jadi pesan DM Instagram
+Deck DJ interaktif dengan audio,interaksi,could,no,yes,"Web Audio, tanpa file musik"
+Navigasi section dan progres scroll,navigasi,should,no,yes,
