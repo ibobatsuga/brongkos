@@ -11,7 +11,10 @@
 | S16 rental | 2026-10-14 | partial | perakit pesan DM jalan; daftar & harga draf |
 | S18 event | 2026-10-14 | partial | arsip event dari IG; instruktur belum ada data |
 | S19 kontak | 2026-10-14 | partial | IG ada; WA & email placeholder |
-| S12 studio | – | not built | butuh daftar fasilitas & alat resmi |
+| S12 studio | 2026-10-14 | done | 5 alat dengan ikon animasi; isi sementara |
 
 Diuji di Chromium headless 1440×900 dan 390×844: tanpa error console, tanpa scroll horizontal,
 deck menyala dan pad bunyi, perakit rental menghasilkan pesan yang benar.
+
+Revisi 2026-10-14: atas persetujuan user, semua placeholder diganti isian sementara
+(ditandai `SEMENTARA` di content.js). Harga kelas & rental: "Tanya via DM".

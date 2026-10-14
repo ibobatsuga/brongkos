@@ -1,11 +1,23 @@
 /* Satu sumber data untuk seluruh halaman.
-   Nilai { isi: "..." } berarti belum ada data resmi dari PopLab:
-   halaman menampilkannya sebagai chip garis putus-putus "isi ...".
-   Ganti dengan nilai asli (string) saat sudah dikonfirmasi pemilik. */
+   Nilai bertanda SEMENTARA adalah isian sementara dari tim desain (disetujui user
+   sebagai versi awal). Ganti dengan data resmi PopLab saat revisi.
+   Nilai { isi: "..." } masih didukung: tampil sebagai chip garis putus-putus. */
 window.POPLAB = {
   instagram: { handle: "@poplab97", url: "https://www.instagram.com/poplab97/", dm: "https://ig.me/m/poplab97" },
-  whatsapp: { isi: "nomor WhatsApp" },
-  email: { isi: "email" },
+  kontak: [
+    { label: "Instagram", nilai: "@poplab97", link: "https://www.instagram.com/poplab97/", salin: true },
+    { label: "Booking slot & kelas", nilai: "DM Instagram", link: "https://ig.me/m/poplab97" },
+    { label: "Rental & kolaborasi", nilai: "DM Instagram", link: "https://ig.me/m/poplab97" }
+  ],
+
+  /* SEMENTARA: disusun dari alat yang terlihat di foto Instagram PopLab. */
+  studio: [
+    { ikon: "deck", nama: "Deck & controller", teks: "Controller DJ all-in-one, siap dipakai buat kelas dan latihan." },
+    { ikon: "monitor", nama: "Speaker monitor", teks: "Monitor studio di samping deck, supaya detail mix-mu kedengaran." },
+    { ikon: "laptop", nama: "Laptop & software", teks: "Laptop dengan software DJ terpasang. Bawa USB atau pakai koleksi lagumu." },
+    { ikon: "rec", nama: "Rekam mix", teks: "Set-mu direkam langsung dari mixer, lalu bisa didengar ulang." },
+    { ikon: "ruang", nama: "Ruang latihan", teks: "Booking slot lewat DM, datang, langsung main." }
+  ],
 
   lini: [
     { kode: "L1", nama: "Kelas DJ", teks: "Belajar DJ dari nol bareng mentor, langsung di alat. Bukan teori di papan tulis." },
@@ -15,45 +27,44 @@ window.POPLAB = {
     { kode: "L5", nama: "Event & Open Deck", teks: "Live session, open deck, dan kolaborasi kolektif. Panggung pertama untuk banyak DJ baru." }
   ],
 
-  /* Kurikulum di bawah adalah DRAF dari tim desain. Modul, jumlah pertemuan,
-     durasi, dan harga wajib dikonfirmasi PopLab sebelum dipublikasikan. */
+  /* SEMENTARA: modul, jumlah pertemuan, dan durasi disusun tim desain. */
   kelas: [
     {
       id: "pemula", nama: "Pemula", sub: "Dari belum pernah pegang deck sampai berani main 30 menit.",
-      pertemuan: { isi: "jumlah pertemuan" }, durasi: { isi: "jam per sesi" }, harga: { isi: "harga" },
+      pertemuan: "8 pertemuan", durasi: "2 jam", harga: "Tanya via DM",
       modul: ["Kenalan dengan deck, mixer, dan jog wheel", "Struktur lagu: bar, frase, drop", "Beatmatching pakai telinga", "Gain, EQ, dan menjaga level tetap bersih", "Transisi dasar: blend dan cut", "Hot cue dan loop", "Menyusun set 30 menit", "Main di open deck"]
     },
     {
       id: "lanjutan", nama: "Lanjutan", sub: "Untuk yang sudah bisa nyambung lagu dan mau punya gaya sendiri.",
-      pertemuan: { isi: "jumlah pertemuan" }, durasi: { isi: "jam per sesi" }, harga: { isi: "harga" },
+      pertemuan: "8 pertemuan", durasi: "2 jam", harga: "Tanya via DM",
       modul: ["Harmonic mixing dan kunci nada", "Transisi kreatif lintas genre", "FX berlapis tanpa berantakan", "Membaca crowd dan mengatur energi", "Set 60 menit dari awal sampai akhir", "Rekam mixtape pertamamu"]
     },
     {
       id: "scratch", nama: "Scratch", sub: "Tangan di platter, jari di fader. Teknik dasar turntablism.",
-      pertemuan: { isi: "jumlah pertemuan" }, durasi: { isi: "jam per sesi" }, harga: { isi: "harga" },
+      pertemuan: "6 pertemuan", durasi: "2 jam", harga: "Tanya via DM",
       modul: ["Posisi tangan dan kurva fader", "Baby scratch dan forward", "Chop dan stab", "Transform", "Flare dasar", "Combo dan routine pendek"]
     },
     {
       id: "privat", nama: "Privat", sub: "Satu mentor, satu murid. Materi mengikuti tujuanmu.",
-      pertemuan: { isi: "jumlah pertemuan" }, durasi: { isi: "jam per sesi" }, harga: { isi: "harga" },
+      pertemuan: "Fleksibel", durasi: "1–2 jam", harga: "Tanya via DM",
       modul: ["Sesi pemetaan: kamu mau main di mana?", "Materi disusun dari kebutuhanmu", "Latihan set untuk acara tertentu", "Review rekaman mix bareng mentor"]
     }
   ],
 
-  /* Daftar rental juga DRAF: sesuaikan dengan inventaris PopLab. */
+  /* SEMENTARA: sesuaikan dengan inventaris PopLab. */
   rental: [
-    { id: "ctrl2", nama: "DJ controller 2 channel", kategori: "Deck", harga: { isi: "harga" } },
-    { id: "ctrl4", nama: "DJ controller 4 channel", kategori: "Deck", harga: { isi: "harga" } },
-    { id: "club", nama: "Media player + mixer (setup klub)", kategori: "Deck", harga: { isi: "harga" } },
-    { id: "monitor", nama: "Speaker monitor aktif (sepasang)", kategori: "Audio", harga: { isi: "harga" } },
-    { id: "headphone", nama: "Headphone DJ", kategori: "Audio", harga: { isi: "harga" } },
-    { id: "laptop", nama: "Laptop + software DJ", kategori: "Deck", harga: { isi: "harga" } }
+    { id: "ctrl2", nama: "DJ controller 2 channel", kategori: "Deck", harga: "Tanya via DM" },
+    { id: "ctrl4", nama: "DJ controller 4 channel", kategori: "Deck", harga: "Tanya via DM" },
+    { id: "club", nama: "Media player + mixer (setup klub)", kategori: "Deck", harga: "Tanya via DM" },
+    { id: "monitor", nama: "Speaker monitor aktif (sepasang)", kategori: "Audio", harga: "Tanya via DM" },
+    { id: "headphone", nama: "Headphone DJ", kategori: "Audio", harga: "Tanya via DM" },
+    { id: "laptop", nama: "Laptop + software DJ", kategori: "Deck", harga: "Tanya via DM" }
   ],
   durasiRental: ["24 jam", "2 hari", "3 hari", "Per acara"],
   syaratRental: [
-    { label: "Area layanan", nilai: { isi: "area layanan" } },
-    { label: "Kru & pengiriman", nilai: { isi: "termasuk / tidak" } },
-    { label: "Jaminan", nilai: { isi: "deposit / identitas" } },
+    { label: "Durasi minimum", nilai: "24 jam" },
+    { label: "Kru & pengiriman", nilai: "Bisa diatur sesuai kebutuhan acara" },
+    { label: "Jaminan", nilai: "Kartu identitas + deposit" },
     { label: "Pemesanan", nilai: "Lewat DM Instagram @poplab97" }
   ],
 

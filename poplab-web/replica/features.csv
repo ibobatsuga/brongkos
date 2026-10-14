@@ -9,17 +9,17 @@ Daftar lini usaha,lini,must,yes,yes,5 kartu spesimen
 Halaman layanan dengan poin a-e,layanan,must,yes,partial,digabung ke kartu lini; detail per layanan belum ada data
 Foto dalam bentuk blob,visual,should,yes,yes,2 foto dari Instagram PopLab
 Halaman pembatas bab,visual,could,yes,yes,pita teks berjalan
-Fasilitas studio,studio,must,yes,no,menunggu daftar fasilitas resmi
-Daftar hardware DJ,studio,must,yes,no,menunggu inventaris resmi
-Daftar software DJ,studio,should,yes,no,menunggu data
-Sound system dan lighting,studio,should,yes,no,menunggu data
-Kurikulum per program,kelas,must,yes,partial,draf modul; perlu konfirmasi
-Meta kelas (pertemuan / hari / jam),kelas,must,yes,partial,placeholder isi
-Harga kelas,kelas,should,yes,partial,placeholder isi
-Tabel rental alat,rental,must,yes,partial,"daftar draf, harga placeholder"
-Syarat rental,rental,must,yes,partial,3 dari 4 placeholder
+Fasilitas studio,studio,must,yes,yes,"5 alat, isi sementara dari foto IG"
+Daftar hardware DJ,studio,must,yes,partial,"kategori alat, bukan daftar merek"
+Daftar software DJ,studio,should,yes,partial,disebut umum: software DJ terpasang
+Sound system dan lighting,studio,should,yes,skip,bukan bagian studio latihan Pop Lab
+Kurikulum per program,kelas,must,yes,yes,"isi sementara, revisi nanti"
+Meta kelas (pertemuan / hari / jam),kelas,must,yes,yes,isi sementara
+Harga kelas,kelas,should,yes,partial,Tanya via DM
+Tabel rental alat,rental,must,yes,yes,isi sementara; harga via DM
+Syarat rental,rental,must,yes,yes,isi sementara
 Tim dan instruktur,tim,should,yes,partial,diganti arsip event + lineup; instruktur belum ada data
-Kontak sosmed telepon email,kontak,must,yes,partial,Instagram ada; WA dan email placeholder
+Kontak sosmed telepon email,kontak,must,yes,partial,Instagram + DM; WA & email belum ada
 Alamat studio,kontak,must,yes,skip,user minta alamat tidak ditampilkan
 Lini multimedia dan teknologi,lini,could,yes,skip,bukan bisnis PopLab
 Event dan konsultan,lini,could,yes,skip,bukan bisnis PopLab

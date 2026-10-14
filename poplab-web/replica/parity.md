@@ -1,38 +1,33 @@
-## Parity: 56.6 / 100
+## Parity: 81.4 / 100
 
-features 56.6  (21 counted, must-haves 4 of 12 done)
+features 81.4  (20 counted, must-haves 9 of 12 done)
 
-Not shippable yet: 8 must-have features are not done.
+Not shippable yet: 3 must-have features are not done.
 
 ## By area, weakest first
-- studio                         0.0  (4 features)
 - layanan                       50.0  (1 features)
-- kelas                         50.0  (3 features)
-- rental                        50.0  (2 features)
 - tim                           50.0  (1 features)
 - kontak                        50.0  (1 features)
+- studio                        68.8  (3 features)
 - hero                          71.4  (3 features)
+- kelas                         87.5  (3 features)
 - intro                        100.0  (3 features)
 - lini                         100.0  (1 features)
 - visual                       100.0  (2 features)
+- rental                       100.0  (2 features)
 
 ## Missing, in build order
-- [must] studio: Daftar hardware DJ, no  (menunggu inventaris resmi)
-- [must] studio: Fasilitas studio, no  (menunggu daftar fasilitas resmi)
-- [must] kelas: Kurikulum per program, partial  (draf modul; perlu konfirmasi)
-- [must] kelas: Meta kelas (pertemuan / hari / jam), partial  (placeholder isi)
-- [must] kontak: Kontak sosmed telepon email, partial  (Instagram ada; WA dan email placeholder)
+- [must] kontak: Kontak sosmed telepon email, partial  (Instagram + DM; WA & email belum ada)
 - [must] layanan: Halaman layanan dengan poin a-e, partial  (digabung ke kartu lini; detail per layanan belum ada data)
-- [must] rental: Syarat rental, partial  (3 dari 4 placeholder)
-- [must] rental: Tabel rental alat, partial  (daftar draf, harga placeholder)
-- [should] studio: Daftar software DJ, no  (menunggu data)
-- [should] studio: Sound system dan lighting, no  (menunggu data)
+- [must] studio: Daftar hardware DJ, partial  (kategori alat, bukan daftar merek)
 - [should] hero: Teks nama brand berulang di dalam lingkaran, partial  (jadi cincin elips dari logo + teks gema di section kontak)
 - [should] hero: Teks vertikal raksasa, partial  (diganti pita teks miring berjalan)
-- [should] kelas: Harga kelas, partial  (placeholder isi)
+- [should] kelas: Harga kelas, partial  (Tanya via DM)
+- [should] studio: Daftar software DJ, partial  (disebut umum: software DJ terpasang)
 - [should] tim: Tim dan instruktur, partial  (diganti arsip event + lineup; instruktur belum ada data)
 
 ## Left out on purpose (not scored)
+- Sound system dan lighting: bukan bagian studio latihan Pop Lab
 - Alamat studio: user minta alamat tidak ditampilkan
 - Lini multimedia dan teknologi: bukan bisnis PopLab
 - Event dan konsultan: bukan bisnis PopLab

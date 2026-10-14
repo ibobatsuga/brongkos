@@ -84,10 +84,26 @@
     return "<div><dt>" + esc(s.label) + "</dt><dd>" + val(s.nilai) + "</dd></div>";
   }).join("");
 
-  $("#contact").innerHTML =
-    '<div><dt>Instagram</dt><dd><a href="' + D.instagram.url + '" target="_blank" rel="noopener">' + esc(D.instagram.handle) + '</a><button class="copy" type="button" data-copy="' + esc(D.instagram.handle) + '">Salin</button></dd></div>' +
-    "<div><dt>WhatsApp</dt><dd>" + val(D.whatsapp) + "</dd></div>" +
-    "<div><dt>Email</dt><dd>" + val(D.email) + "</dd></div>";
+  $("#contact").innerHTML = D.kontak.map(function (k) {
+    var v = k.link ? '<a href="' + esc(k.link) + '" target="_blank" rel="noopener">' + val(k.nilai) + "</a>" : val(k.nilai);
+    if (k.salin) v += '<button class="copy" type="button" data-copy="' + esc(k.nilai) + '">Salin</button>';
+    return "<div><dt>" + esc(k.label) + "</dt><dd>" + v + "</dd></div>";
+  }).join("");
+
+  var ICON = {
+    deck: '<span class="ic-deck"><span></span></span>',
+    monitor: '<span class="ic-monitor" data-pulse><span></span><span></span></span>',
+    laptop: '<span class="ic-wave">' + "<i></i>".repeat(9) + "</span>",
+    rec: '<span class="ic-rec"><span></span>REC</span>',
+    ruang: '<span class="ic-ring"></span>'
+  };
+  $("#bench").innerHTML = D.studio.map(function (t, i) {
+    return '<article class="tool">' +
+      '<div class="tool-ic" aria-hidden="true">' + (ICON[t.ikon] || "") + "</div>" +
+      '<p class="tool-no mono">ALAT ' + String(i + 1).padStart(2, "0") + "</p>" +
+      '<h3 class="tool-name">' + esc(t.nama) + "</h3>" +
+      '<p class="tool-text">' + esc(t.teks) + "</p></article>";
+  }).join("");
 
   document.addEventListener("click", function (e) {
     var b = e.target.closest("[data-copy]"); if (!b) return;
